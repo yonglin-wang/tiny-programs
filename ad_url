@@ -1,0 +1,49 @@
+#!/usr/bin/osascript
+
+-- set a to "Al "
+-- set b to "was "
+-- set c to 3
+-- set myVar to a & b & c
+-- display dialog myVar
+
+-- set a to 255
+
+-- -- variables and increment from https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_variables.html#//apple_ref/doc/uid/TP40000983-CH223-SW10
+-- global startID
+
+
+-- on increment()
+--     set startID to startID + 50
+-- end increment
+
+-- -- repeat while startID < a
+-- -- 	say startID
+-- -- 	increment()
+-- -- end repeat
+
+
+
+-- code from https://apple.stackexchange.com/questions/306627/how-can-i-open-multiple-urls-in-a-new-chrome-window-from-the-terminal
+on run(AdjUrl, total)
+	say "opening chrome"
+	set startID to 0
+	set pagesOpen to 0
+    tell app id "com.google.chrome" to tell make new window
+            repeat while startID < total
+                set newTab to make new tab with properties { url: AdjUrl & startID}
+                set startID to startID + 50
+                set pagesOpen to pagesOpen + 1
+            end repeat
+            tell tab 1 to close
+    end tell
+
+    say "Total" & pagesOpen & "pages opened."
+end 
+
+
+
+-- -- To use this script
+-- -- make it executable: $ chmod 755 <path to script>
+-- -- add to shell shorthand, first open bashrc: $ vi ~/.bashrc
+-- -- if no .bashrc on mac, see this: https://stackoverflow.com/questions/19662713/where-do-i-find-the-bashrc-file-on-mac
+-- -- insert line in vim and save: export PATH="$PATH:<path to folder containing this script>"
