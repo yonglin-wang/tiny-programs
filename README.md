@@ -3,6 +3,8 @@ One-script utility programs created to handle daily tasks. Sometimes scripted in
 
 # Python Programs
 
+All python programs will be made executable, so no need to add ```python``` before the script name in command line. 
+
 ## combo-gen.py: Combo Generator
 
 ### Use Case
@@ -10,13 +12,13 @@ One-script utility programs created to handle daily tasks. Sometimes scripted in
 Wrote this when trying to decide on how we wanted to build our BBQ combo. When we made up our minds and ordered, the restaurant told us that we didn't actually have a choice :| 得亏他们家做的烤串和涮串都还挺好吃……
 
 ### How to Run
-This script is command-line enabled. Use ```$ python combo-gen.py -h``` to see help.
+This script is command-line enabled. Use ```$ ./combo-gen.py -h``` to see help.
 
 It can recognize Chinese characters and switch to Chinese. Otherwise, English output strings will be used.
 
 Example 1: Chinese input. Remember to put ascii double quotes around text list if containing whitespaces in between.
 ```
-$ python combo-gen.py 鹌鹑蛋，鱼豆腐，菜卷，毛肚，油豆腐，鱼丸，大白菜，海带结，木耳，蘑菇 30
+$ ./combo-gen.py 鹌鹑蛋，鱼豆腐，菜卷，毛肚，油豆腐，鱼丸，大白菜，海带结，木耳，蘑菇 30
 ```
 Output:
 ```
@@ -35,7 +37,7 @@ Output:
 
 Example 2: Non Chinese input, remember to put double quotes around list text.
 ```
-$ python combo-gen.py "chocolate chip, oatmeal rasin, sugar, molasses, ginger snap" 20
+$ ./combo-gen.py "chocolate chip, oatmeal rasin, sugar, molasses, ginger snap" 20
 ```
 Output:
 ```
