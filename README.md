@@ -21,9 +21,10 @@ In other words, I have a work routine where I have a template url, e.g. ```some.
 
 ### How to Run
 
-1. Download the script "ad_url" from this repository. (e.g. you can right-click and choose "Download Linked File")
-2. Put the file in a new, empty folder, e.g. ```my_adj_folder/```
-3. Open terminal and enter the following command, substituting ```<absolute path to script's directory>``` with the absolute path to the folder you saved ```ad_url``` to:
+1. Make sure you have Chrome installed. The script only works with Chrome browsers. 
+2. Download the script "ad_url" from this repository. (e.g. you can right-click and choose "Download Linked File")
+3. Put the file in a new, empty folder, e.g. ```my_adj_folder/```
+4. Open terminal and enter the following command, substituting ```<absolute path to script's directory>``` with the absolute path to the folder you saved ```ad_url``` to:
     ```bash
     export PATH="$PATH:<absolute path to script's directory>"
     ```
